@@ -9,17 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        layer1: layer1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER1";
-            bindings = <&none>;
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <36>;
-            tapping-term-ms = <5>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
