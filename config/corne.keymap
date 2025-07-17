@@ -10,17 +10,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    behaviors {
-        hold_tap: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP";
-            bindings = <&mt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -32,10 +21,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q                 &kp W                 &kp F                     &kp P                   &kp B      &kp J    &kp L                    &kp U                      &kp Y                  &kp SQT                &trans
-&trans  &hold_tap LEFT_GUI A  &hold_tap LEFT_ALT R  &hold_tap LEFT_CONTROL S  &hold_tap LEFT_SHIFT T  &kp G      &kp M    &hold_tap RIGHT_SHIFT N  &hold_tap RIGHT_CONTROL E  &hold_tap RIGHT_ALT I  &hold_tap RIGHT_GUI O  &trans
-&trans  &kp Z                 &kp X                 &kp C                     &kp D                   &kp V      &kp K    &kp H                    &kp COMMA                  &kp DOT                &kp FSLH               &trans
-                                                    &kp ESC                   &kp SPACE               &kp TAB    &kp RET  &kp BACKSPACE            &kp RIGHT_SHIFT
+&trans  &kp Q           &kp W           &kp F               &kp P             &kp B        &kp J        &kp L              &kp U                &kp Y            &kp SQT          &trans
+&trans  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G        &kp M        &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &trans
+&trans  &kp Z           &kp X           &kp C               &kp D             &kp V        &kp K        &kp H              &kp COMMA            &kp DOT          &kp FSLH         &trans
+                                        &lt 1 ESC           &lt 2 SPACE       &lt 3 TAB    &lt 5 ENTER  &lt 4 BACKSPACE    &lt 6 RIGHT_SHIFT
             >;
         };
 
