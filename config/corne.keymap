@@ -47,9 +47,9 @@
 
         Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LG(Z))  &kp LG(V)      &kp LG(C)      &kp LG(X)    &kp LG(Z)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp CAPSLOCK   &kp LEFT       &kp UP         &kp DOWN     &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp INS        &kp C_AC_HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LG(Z))  &kp LG(V)      &kp LG(C)       &kp LG(X)     &kp LG(Z)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp CAPSLOCK   &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp INS        &kp C_AC_HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans
                         &trans  &trans  &trans    &trans         &trans         &trans
             >;
         };
