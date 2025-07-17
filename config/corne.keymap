@@ -10,6 +10,17 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        hold_tap: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,9 +32,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q  &kp W  &kp F    &kp R      &kp B      &kp J    &kp L          &kp U            &kp Y    &kp SQT   &trans
-&trans  &kp A  &kp R  &kp S    &kp T      &kp G      &kp M    &kp N          &kp E            &kp I    &kp O     &trans
-&trans  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K    &kp H          &kp COMMA        &kp DOT  &kp FSLH  &trans
+&trans  &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J    &kp L          &kp U            &kp Y    &kp SQT            &trans
+&trans  &kp A  &kp R  &kp S    &kp T      &kp G      &kp M    &kp N          &kp E            &kp I    &hold_tap RG(O) O  &trans
+&trans  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K    &kp H          &kp COMMA        &kp DOT  &kp FSLH           &trans
                       &kp ESC  &kp SPACE  &kp TAB    &kp RET  &kp BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
